@@ -17,8 +17,8 @@ namespace TrialProject.Utilities
             switch (browserName)
             {
                 case "Chrome":
-                    driver = new ChromeDriver();
-                //                    driver = new ChromeDriver(@"C:\TrialProject\TrialProject\bin\Debug");
+                    string chromeDriver = Environment.CurrentDirectory;
+                    driver = new ChromeDriver(chromeDriver);
                     driver.Navigate().GoToUrl(url);
                     driver.Manage().Timeouts().ImplicitWait=System.TimeSpan.FromSeconds(60);
                     driver.Manage().Window.Maximize();
