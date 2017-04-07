@@ -60,11 +60,14 @@
   <ItemGroup>
     <Compile Include="PageObjects\HomePageObjects.cs" />
     <Compile Include="PageObjects\LoginPageObjects.cs" />
+    <Compile Include="PageObjects\Lrap\LrapHomePageObjects.cs" />
+    <Compile Include="PageObjects\Lrap\LrapLoginPageObjects.cs" />
     <Compile Include="PageVariables\HomePageVariables.cs" />
     <Compile Include="PageVariables\LoginPageVariables.cs" />
     <Compile Include="Scenarios\DriverScenario.cs" />
     <Compile Include="Scenarios\HomePageScenarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenarios\LrapHomePageScenarios.cs" />
     <Compile Include="Utilities\CommonMethods.cs" />
     <Compile Include="Utilities\SelectingBrowsers.cs" />
     <Compile Include="Utilities\SendEmailNotification.cs" />

@@ -35,6 +35,7 @@ namespace TrialProject.Utilities
 
         public static void AssertValueContains(this By objectName, string value)
         {
+            VerifyObjectDisplay(objectName);
             IWebElement element = SelectingBrowsers.driver.FindElement(objectName);
 
             Assert.IsTrue(element.Text.Contains(value), element + " is not matching with the expected value");

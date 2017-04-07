@@ -16,8 +16,7 @@ namespace TrialProject.Utilities
         {   
             switch (browserName)
             {
-                case "Chrome":
-                    string chromeDriver = Environment.CurrentDirectory;
+                case "Chrome":                  
                     driver = new ChromeDriver("c:\\");
                     driver.Navigate().GoToUrl(url);
                     driver.Manage().Timeouts().ImplicitWait=System.TimeSpan.FromSeconds(60);

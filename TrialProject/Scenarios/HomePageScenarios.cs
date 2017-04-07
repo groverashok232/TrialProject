@@ -13,7 +13,7 @@ namespace TrialProject.Scenarios
     [TestClass]
     public class HomePageScenarios : DriverScenario
     {
-      [TestMethod]
+      //[TestMethod]
         public void VerifyHomePageDisplayed()
         {
           try
