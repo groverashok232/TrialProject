@@ -10,11 +10,17 @@ namespace TrialProject.PageObjects.Lrap
 {
    public class LrapHomePageObjects
     {
-       static By dashboardLink = By.CssSelector("a[ng-reflect-router-link='/app/main/dashboard']");
-        public static void VerifyDashboardTabDisplay()
+       static By userNameSpan = By.CssSelector("span.username.username-hide-on-mobile");
+        static By studentsLink = By.CssSelector("a[ng-reflect-router-link='/app/main/students']");
+
+        public static void VerifyUserNameExists()
         {
-            dashboardLink.AssertValueContains("Dashboard");
+            userNameSpan.AssertExists();
         }
       
+        public static void ClickStudentsLink()
+        {
+            studentsLink.Click();
+        }
     }
 }

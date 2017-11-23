@@ -61,7 +61,9 @@
     <Compile Include="PageObjects\HomePageObjects.cs" />
     <Compile Include="PageObjects\LoginPageObjects.cs" />
     <Compile Include="PageObjects\Lrap\LrapHomePageObjects.cs" />
+    <Compile Include="PageObjects\Lrap\LrapInstitutionsPageObjects.cs" />
     <Compile Include="PageObjects\Lrap\LrapLoginPageObjects.cs" />
+    <Compile Include="PageObjects\Lrap\LrapStudentsPageObjects.cs" />
     <Compile Include="PageVariables\HomePageVariables.cs" />
     <Compile Include="PageVariables\LoginPageVariables.cs" />
     <Compile Include="Scenarios\DriverScenario.cs" />

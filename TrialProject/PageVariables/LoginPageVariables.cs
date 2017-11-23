@@ -10,11 +10,11 @@ namespace TrialProject.PageVariables
     {
         public static string userName = "jay.shah.greeley";
 
-        public static string password = "password1";
+        public static string password = "Password!1";
 
-        public static string lrapUserName = "admin";
+        public static string lrapUserName = "test.test";
 
-        public static string lrapPassword = "1qaz!QAZ";
+        public static string lrapPassword = "Password!1";
 
     }
 }

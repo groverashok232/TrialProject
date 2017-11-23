@@ -20,7 +20,7 @@ namespace TrialProject.Utilities
                     driver = new ChromeDriver("c:\\");
                     driver.Navigate().GoToUrl(url);
                     driver.Manage().Timeouts().ImplicitWait=System.TimeSpan.FromSeconds(60);
-                    driver.Manage().Window.Maximize();
+                 //   driver.Manage().Window.Maximize();
                     break;
             }
             return driver;

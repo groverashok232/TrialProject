@@ -13,18 +13,40 @@ namespace TrialProject.Scenarios
     public class LrapHomePageScenarios : DriverScenario
     {
         [TestMethod]
-        public void VerifyLrapHomePageDisplayed()
+        public void VerifyEditingOnInstitutionPageWorksFine()
         {
-            try
-            {
+                string city = "testcity";
                 LrapLoginPageObjects.EnterLoginDetails();
-                LrapHomePageObjects.VerifyDashboardTabDisplay();
-            }
-            catch (Exception e)
-            {
-                SendEmailNotification.SendEmail(e.Message);
-                throw;
-            }
+                LrapHomePageObjects.VerifyUserNameExists();
+                LrapInstitutionsPageObjects.ClickFirstInstitutionDetail();
+                LrapInstitutionsPageObjects.ClickEditButton();
+                LrapInstitutionsPageObjects.EnterCity(city);
+                LrapInstitutionsPageObjects.ClickSave();
+                LrapInstitutionsPageObjects.VerifyTheCity(city);
+                LrapInstitutionsPageObjects.ClickEditButton();
+                LrapInstitutionsPageObjects.EnterCity("");
+                LrapInstitutionsPageObjects.ClickSave();
+                LrapInstitutionsPageObjects.VerifyTheCity("");         
+        }
+
+
+        [TestMethod]
+        public void VerifyEditingOnStudentsPageWorksFine()
+        {
+            string name = "testcity";
+            LrapLoginPageObjects.EnterLoginDetails();
+            LrapHomePageObjects.VerifyUserNameExists();
+            LrapHomePageObjects.ClickStudentsLink();
+            LrapStudentsPageObjects.ClickFirstStudentDetail();
+            LrapStudentsPageObjects.ClickEditButton();
+            string existingName = LrapStudentsPageObjects.GetFirstName();
+            LrapStudentsPageObjects.EnterFirstName(name);
+            LrapStudentsPageObjects.ClickSave();
+            LrapStudentsPageObjects.VerifyTheName(name);
+            LrapStudentsPageObjects.ClickEditButton();
+            LrapStudentsPageObjects.EnterFirstName(existingName);
+            LrapStudentsPageObjects.ClickSave();
+            LrapStudentsPageObjects.VerifyTheName(existingName);
         }
     }
 }

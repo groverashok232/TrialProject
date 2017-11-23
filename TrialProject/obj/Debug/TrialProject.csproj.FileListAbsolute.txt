@@ -8,3 +8,14 @@ E:\My Work\Jay Shah Cloud PCR\TrialProject\TrialProject\bin\Debug\WebDriver.Supp
 E:\My Work\Jay Shah Cloud PCR\TrialProject\TrialProject\obj\Debug\TrialProject.csprojResolveAssemblyReference.cache
 E:\My Work\Jay Shah Cloud PCR\TrialProject\TrialProject\obj\Debug\TrialProject.dll
 E:\My Work\Jay Shah Cloud PCR\TrialProject\TrialProject\obj\Debug\TrialProject.pdb
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\TrialProject.dll.config
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\TrialProject.dll
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\TrialProject.pdb
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\WebDriver.dll
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\WebDriver.Support.dll
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\WebDriver.xml
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\bin\Debug\WebDriver.Support.xml
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\obj\Debug\TrialProject.csprojResolveAssemblyReference.cache
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\obj\Debug\TrialProject.dll
+C:\Users\testadmin\Documents\GitHub\TrialProject\TrialProject\obj\Debug\TrialProject.pdb

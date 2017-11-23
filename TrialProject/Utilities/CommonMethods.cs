@@ -19,6 +19,11 @@ namespace TrialProject.Utilities
             SelectingBrowsers.driver.FindElement(objectName).SendKeys(text);
 
         }
+        public static string GetText(this By objectName)
+        {
+            VerifyObjectDisplay(objectName);
+           return SelectingBrowsers.driver.FindElement(objectName).Text;
+        }
 
         public static void Click(this By objectName)
         {
@@ -40,7 +45,13 @@ namespace TrialProject.Utilities
 
             Assert.IsTrue(element.Text.Contains(value), element + " is not matching with the expected value");
         }
+        public static void AssertExists(this By objectName)
+        {
+            VerifyObjectDisplay(objectName);
+            IWebElement element = SelectingBrowsers.driver.FindElement(objectName);
 
+            Assert.IsTrue(element.Displayed, "Objectname is not matching with the expected value");
+        }
 
         private static void VerifyObjectDisplay(By objectName)
         {
