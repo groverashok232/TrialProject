@@ -38,6 +38,21 @@ namespace TrialProject.Utilities
             select.SelectByValue(value);
         }
 
+        public static void SelectTextInDropdown(this By objectName, string value)
+        {
+            new WebDriverWait(SelectingBrowsers.driver, TimeSpan.FromSeconds(80)).Until(ExpectedConditions.ElementToBeClickable((objectName)));
+            SelectElement select = new SelectElement(SelectingBrowsers.driver.FindElement(objectName));
+            select.SelectByText(value);
+        }
+
+        public static void SelectIndexInDropdown(this By objectName, int value)
+        {
+            new WebDriverWait(SelectingBrowsers.driver, TimeSpan.FromSeconds(80)).Until(ExpectedConditions.ElementToBeClickable((objectName)));
+            SelectElement select = new SelectElement(SelectingBrowsers.driver.FindElement(objectName));
+            select.SelectByIndex(value);
+        }
+
+
         public static void AssertValueContains(this By objectName, string value)
         {
             VerifyObjectDisplay(objectName);

@@ -15,18 +15,17 @@ namespace TrialProject.Scenarios
         [TestMethod]
         public void VerifyEditingOnInstitutionPageWorksFine()
         {
-                string city = "testcity";
-                LrapLoginPageObjects.EnterLoginDetails();
-                LrapHomePageObjects.VerifyUserNameExists();
-                LrapInstitutionsPageObjects.ClickFirstInstitutionDetail();
-                LrapInstitutionsPageObjects.ClickEditButton();
-                LrapInstitutionsPageObjects.EnterCity(city);
-                LrapInstitutionsPageObjects.ClickSave();
-                LrapInstitutionsPageObjects.VerifyTheCity(city);
-                LrapInstitutionsPageObjects.ClickEditButton();
-                LrapInstitutionsPageObjects.EnterCity("");
-                LrapInstitutionsPageObjects.ClickSave();
-                LrapInstitutionsPageObjects.VerifyTheCity("");         
+            string city = "testcity";
+            string school = "Test School";
+            LrapLoginPageObjects.EnterLoginDetails();
+            LrapHomePageObjects.VerifyUserNameExists();
+            LrapInstitutionsPageObjects.EnterNewInstitutionData(school);
+            LrapInstitutionsPageObjects.ClickEditButton();
+            LrapInstitutionsPageObjects.EnterCity(city);
+            LrapInstitutionsPageObjects.ClickSave();
+            LrapInstitutionsPageObjects.VerifyTheCity(city);
+            LrapInstitutionsPageObjects.DeleteInstitution();
+            LrapInstitutionsPageObjects.VerifyDeleted();
         }
 
 
@@ -37,16 +36,13 @@ namespace TrialProject.Scenarios
             LrapLoginPageObjects.EnterLoginDetails();
             LrapHomePageObjects.VerifyUserNameExists();
             LrapHomePageObjects.ClickStudentsLink();
-            LrapStudentsPageObjects.ClickFirstStudentDetail();
+            LrapStudentsPageObjects.EnterStudentsDetails("FirstNameTest");
             LrapStudentsPageObjects.ClickEditButton();
-            string existingName = LrapStudentsPageObjects.GetFirstName();
             LrapStudentsPageObjects.EnterFirstName(name);
             LrapStudentsPageObjects.ClickSave();
             LrapStudentsPageObjects.VerifyTheName(name);
-            LrapStudentsPageObjects.ClickEditButton();
-            LrapStudentsPageObjects.EnterFirstName(existingName);
-            LrapStudentsPageObjects.ClickSave();
-            LrapStudentsPageObjects.VerifyTheName(existingName);
+            LrapStudentsPageObjects.DeleteStudent();
+            LrapStudentsPageObjects.VerifyDeleted();
         }
     }
 }

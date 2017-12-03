@@ -22,7 +22,7 @@ namespace TrialProject.Scenarios
         [TestCleanup]
         public void CloseBrowser()
         {
-            driver.Close();
+            driver.Quit();
         }
 
     }
